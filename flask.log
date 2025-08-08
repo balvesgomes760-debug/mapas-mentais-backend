@@ -1,0 +1,258 @@
+nohup: ignoring input
+ * Serving Flask app 'main'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://169.254.0.21:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 656-607-900
+127.0.0.1 - - [08/Aug/2025 16:59:14] "GET /api/disciplinas HTTP/1.1" 200 -
+127.0.0.1 - - [08/Aug/2025 17:00:04] "OPTIONS /api/disciplinas HTTP/1.1" 200 -
+127.0.0.1 - - [08/Aug/2025 17:00:04] "OPTIONS /api/disciplinas HTTP/1.1" 200 -
+127.0.0.1 - - [08/Aug/2025 17:00:04] "GET /api/disciplinas HTTP/1.1" 200 -
+127.0.0.1 - - [08/Aug/2025 17:00:04] "GET /api/disciplinas HTTP/1.1" 200 -
+127.0.0.1 - - [08/Aug/2025 17:01:07] "OPTIONS /api/questoes HTTP/1.1" 200 -
+127.0.0.1 - - [08/Aug/2025 17:01:07] "OPTIONS /api/questoes HTTP/1.1" 200 -
+127.0.0.1 - - [08/Aug/2025 17:01:07] "GET /api/questoes HTTP/1.1" 200 -
+127.0.0.1 - - [08/Aug/2025 17:01:07] "GET /api/questoes HTTP/1.1" 200 -
+ * Detected change in '/home/ubuntu/mapas_mentais_backend/src/main.py', reloading
+ * Restarting with stat
+127.0.0.1 - - [08/Aug/2025 17:10:33] "GET /api/disciplinas HTTP/1.1" 200 -
+10.92.160.1 - - [08/Aug/2025 17:10:43] "GET /api/disciplinas HTTP/1.1" 200 -
+10.92.160.1 - - [08/Aug/2025 17:10:43] "GET /favicon.ico HTTP/1.1" 200 -
+10.92.160.1 - - [08/Aug/2025 17:11:19] "OPTIONS /api/disciplinas HTTP/1.1" 200 -
+10.92.160.1 - - [08/Aug/2025 17:11:19] "GET /api/disciplinas HTTP/1.1" 200 -
+10.92.160.1 - - [08/Aug/2025 17:11:27] "OPTIONS /api/questoes HTTP/1.1" 200 -
+10.92.160.1 - - [08/Aug/2025 17:11:27] "GET /api/questoes HTTP/1.1" 200 -
+10.92.160.1 - - [08/Aug/2025 17:13:36] "HEAD / HTTP/1.1" 200 -
+10.92.160.1 - - [08/Aug/2025 17:13:36] "GET / HTTP/1.1" 200 -
+10.92.160.1 - - [08/Aug/2025 17:14:07] "OPTIONS /api/disciplinas HTTP/1.1" 200 -
+10.92.160.1 - - [08/Aug/2025 17:14:08] "GET /api/disciplinas HTTP/1.1" 200 -
+10.92.160.1 - - [08/Aug/2025 17:14:28] "OPTIONS /api/questoes HTTP/1.1" 200 -
+10.92.160.1 - - [08/Aug/2025 17:14:28] "GET /api/questoes HTTP/1.1" 200 -
+10.92.160.1 - - [08/Aug/2025 17:14:42] "OPTIONS /api/disciplinas HTTP/1.1" 200 -
+10.92.160.1 - - [08/Aug/2025 17:14:42] "GET /api/disciplinas HTTP/1.1" 200 -
+10.92.160.1 - - [08/Aug/2025 17:15:00] "OPTIONS /api/disciplinas HTTP/1.1" 200 -
+10.92.160.1 - - [08/Aug/2025 17:15:00] "GET /api/disciplinas HTTP/1.1" 200 -
+10.92.160.1 - - [08/Aug/2025 17:15:33] "GET / HTTP/1.1" 200 -
+10.92.160.1 - - [08/Aug/2025 17:15:34] "GET /favicon.ico HTTP/1.1" 200 -
+10.92.160.1 - - [08/Aug/2025 17:15:41] "GET /api/users HTTP/1.1" 200 -
+10.92.160.1 - - [08/Aug/2025 17:15:43] "GET /api/users HTTP/1.1" 200 -
+[2025-08-08 17:15:50,971] ERROR in app: Exception on /api/users [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: NOT NULL constraint failed: user.senha_hash
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/mapas_mentais_backend/src/routes/user.py", line 17, in create_user
+    db.session.commit()
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/orm/scoping.py", line 599, in commit
+    return self._proxied.commit()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2032, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1313, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1288, in _prepare_impl
+    self.session.flush()
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 4345, in flush
+    self._flush(objects)
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 4480, in _flush
+    with util.safe_reraise():
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 4441, in _flush
+    flush_context.execute()
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/orm/persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1415, in execute
+    return meth(
+           ^^^^^
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1637, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1982, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2351, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) NOT NULL constraint failed: user.senha_hash
+[SQL: INSERT INTO user (username, email, senha_hash, creditos, tipo_usuario, data_cadastro, ativo) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('Triz_gms', 'beatrizalves70@live.com', None, 0.0, 'estudante', '2025-08-08 21:15:50.970573', 1)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+10.92.160.1 - - [08/Aug/2025 17:15:50] "[35m[1mPOST /api/users HTTP/1.1[0m" 500 -
+10.92.160.1 - - [08/Aug/2025 17:16:05] "GET /api/users HTTP/1.1" 200 -
+10.92.160.1 - - [08/Aug/2025 17:16:21] "OPTIONS /api/disciplinas HTTP/1.1" 200 -
+10.92.160.1 - - [08/Aug/2025 17:16:21] "GET /api/disciplinas HTTP/1.1" 200 -
+10.92.160.1 - - [08/Aug/2025 17:16:41] "[36mGET / HTTP/1.1[0m" 304 -
+10.92.160.1 - - [08/Aug/2025 17:16:46] "GET /api/users HTTP/1.1" 200 -
+10.92.160.1 - - [08/Aug/2025 17:16:48] "GET /api/users HTTP/1.1" 200 -
+10.92.160.1 - - [08/Aug/2025 17:16:50] "GET /api/users HTTP/1.1" 200 -
+[2025-08-08 17:17:08,042] ERROR in app: Exception on /api/users [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: NOT NULL constraint failed: user.senha_hash
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/mapas_mentais_backend/src/routes/user.py", line 17, in create_user
+    db.session.commit()
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/orm/scoping.py", line 599, in commit
+    return self._proxied.commit()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2032, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1313, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1288, in _prepare_impl
+    self.session.flush()
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 4345, in flush
+    self._flush(objects)
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 4480, in _flush
+    with util.safe_reraise():
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 4441, in _flush
+    flush_context.execute()
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/orm/persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1415, in execute
+    return meth(
+           ^^^^^
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1637, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1982, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2351, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/ubuntu/mapas_mentais_backend/venv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) NOT NULL constraint failed: user.senha_hash
+[SQL: INSERT INTO user (username, email, senha_hash, creditos, tipo_usuario, data_cadastro, ativo) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('Triz_gms', 'balvesgomes760@gmail.com', None, 0.0, 'estudante', '2025-08-08 21:17:08.041558', 1)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+10.92.160.1 - - [08/Aug/2025 17:17:08] "[35m[1mPOST /api/users HTTP/1.1[0m" 500 -
+10.92.160.1 - - [08/Aug/2025 17:17:18] "GET /api/users HTTP/1.1" 200 -
+10.92.160.1 - - [08/Aug/2025 17:17:43] "OPTIONS /api/disciplinas HTTP/1.1" 200 -
+10.92.160.1 - - [08/Aug/2025 17:17:43] "GET /api/disciplinas HTTP/1.1" 200 -
+10.92.160.1 - - [08/Aug/2025 17:18:05] "OPTIONS /api/questoes HTTP/1.1" 200 -
+10.92.160.1 - - [08/Aug/2025 17:18:05] "GET /api/questoes HTTP/1.1" 200 -
+10.92.160.1 - - [08/Aug/2025 17:21:29] "HEAD / HTTP/1.1" 200 -
+10.92.160.1 - - [08/Aug/2025 17:21:29] "GET / HTTP/1.1" 200 -
+10.92.160.1 - - [08/Aug/2025 17:21:39] "[36mGET / HTTP/1.1[0m" 304 -
+10.92.160.1 - - [08/Aug/2025 17:21:51] "OPTIONS /api/disciplinas HTTP/1.1" 200 -
+10.92.160.1 - - [08/Aug/2025 17:21:51] "GET /api/disciplinas HTTP/1.1" 200 -
+10.92.160.1 - - [08/Aug/2025 17:22:31] "OPTIONS /api/disciplinas HTTP/1.1" 200 -
+10.92.160.1 - - [08/Aug/2025 17:22:31] "GET /api/disciplinas HTTP/1.1" 200 -
+10.92.160.1 - - [08/Aug/2025 17:23:48] "OPTIONS /api/disciplinas HTTP/1.1" 200 -
+10.92.160.1 - - [08/Aug/2025 17:23:48] "GET /api/disciplinas HTTP/1.1" 200 -
+10.92.160.1 - - [08/Aug/2025 17:24:06] "OPTIONS /api/disciplinas HTTP/1.1" 200 -
+10.92.160.1 - - [08/Aug/2025 17:24:06] "GET /api/disciplinas HTTP/1.1" 200 -
+10.39.145.1 - - [08/Aug/2025 17:41:56] "OPTIONS /api/disciplinas HTTP/1.1" 200 -
+10.39.145.1 - - [08/Aug/2025 17:41:56] "GET /api/disciplinas HTTP/1.1" 200 -
+10.185.251.1 - - [08/Aug/2025 18:15:10] "[35m[1mGET / HTTP/1.1[0m" 206 -
+10.185.251.1 - - [08/Aug/2025 18:15:10] "[35m[1mGET / HTTP/1.1[0m" 206 -
+10.185.251.1 - - [08/Aug/2025 18:19:23] "OPTIONS /api/disciplinas HTTP/1.1" 200 -
+10.185.251.1 - - [08/Aug/2025 18:19:24] "GET /api/disciplinas HTTP/1.1" 200 -
+10.185.251.1 - - [08/Aug/2025 18:19:28] "OPTIONS /api/questoes HTTP/1.1" 200 -
+10.185.251.1 - - [08/Aug/2025 18:19:28] "GET /api/questoes HTTP/1.1" 200 -
+10.185.251.1 - - [08/Aug/2025 18:19:33] "OPTIONS /api/disciplinas HTTP/1.1" 200 -
+10.185.251.1 - - [08/Aug/2025 18:19:33] "GET /api/disciplinas HTTP/1.1" 200 -
+10.185.251.1 - - [08/Aug/2025 18:19:57] "OPTIONS /api/questoes HTTP/1.1" 200 -
+10.185.251.1 - - [08/Aug/2025 18:19:57] "GET /api/questoes HTTP/1.1" 200 -
+10.185.251.1 - - [08/Aug/2025 18:20:09] "OPTIONS /api/disciplinas HTTP/1.1" 200 -
+10.185.251.1 - - [08/Aug/2025 18:20:09] "GET /api/disciplinas HTTP/1.1" 200 -
+10.185.251.1 - - [08/Aug/2025 18:20:10] "OPTIONS /api/questoes HTTP/1.1" 200 -
+10.185.251.1 - - [08/Aug/2025 18:20:10] "GET /api/questoes HTTP/1.1" 200 -
+10.185.251.1 - - [08/Aug/2025 18:20:27] "OPTIONS /api/disciplinas HTTP/1.1" 200 -
+10.185.251.1 - - [08/Aug/2025 18:20:27] "GET /api/disciplinas HTTP/1.1" 200 -
