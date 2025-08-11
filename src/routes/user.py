@@ -12,7 +12,18 @@ def get_users():
 def create_user():
     
     data = request.json
-    user = User(username=data['username'], email=data['email'])
+    username = data.get('username')
+    email = data.get('email')
+    password = data.get('password')
+
+    if not username or not email or not password:
+        return jsonify({'message': 'Nome de usuário, email e senha são obrigatórios'}), 400
+
+    if User.query.filter_by(email=email).first():
+        return jsonify({'message': 'Email já cadastrado'}), 409
+
+    user = User(username=username, email=email)
+    user.set_password(password)
     db.session.add(user)
     db.session.commit()
     return jsonify(user.to_dict()), 201
