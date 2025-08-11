@@ -48,3 +48,21 @@ def delete_user(user_id):
     db.session.delete(user)
     db.session.commit()
     return '', 204
+
+
+@user_bp.route("/auth/login", methods=["POST"])
+def login():
+    data = request.json
+    email = data.get("email")
+    password = data.get("password")
+
+    user = User.query.filter_by(email=email).first()
+
+    if user and user.check_password(password):
+        # Aqui você geraria um token JWT real
+        access_token = "seu_token_jwt_aqui"  # Substitua por um token JWT real
+        return jsonify(access_token=access_token), 200
+    else:
+        return jsonify({"message": "Credenciais inválidas"}), 401
+
+
